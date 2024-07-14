@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/14 11:36:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/14 12:21:52 by gprada-t         ###   ########.fr       */
+/*   Created: 2024/07/14 11:35:21 by gprada-t          #+#    #+#             */
+/*   Updated: 2024/07/14 12:20:41 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+
 #include <string>
-#include "Weapon.hpp"
 
-int	main()
+class	Weapon
 {
-	Weapon newWeapon;
-	std::string club = "CLUB WEAPON";
+	public:
+		Weapon();
+		~Weapon();
+		void		setType(std::string &type);
+		std::string	getType() const;
 
-	newWeapon.setType(club);
-	std::cout << newWeapon.getType();
-	return 0;
-}
+	private:
+		std::string type;
+};
+
+#endif
