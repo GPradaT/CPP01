@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/14 11:36:05 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/15 14:00:11 by gprada-t         ###   ########.fr       */
+/*   Created: 2024/07/15 08:47:50 by gprada-t          #+#    #+#             */
+/*   Updated: 2024/07/15 11:03:55 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "HumanB.hpp"
-#include "HumanA.hpp"
-#include "Weapon.hpp"
 
-
-int main()
+HumanB::HumanB(std::string name)
 {
+	this->name = name;
+	weapon = NULL;
+}
+
+HumanB::~HumanB()
+{
+	std::cout << name << " destroyed." << std::endl;
+}
+
+void	HumanB::attack() const
+{
+	if (this->weapon == NULL)
 	{
-		Weapon club = Weapon("snake sword");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		std::cout << name << " is unnarmed, is not possible to use the weapon." << std::endl;
+		return ;
 	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+}
+
+void	HumanB::setWeapon(Weapon &armed)
+{
+	weapon = &armed;
 }

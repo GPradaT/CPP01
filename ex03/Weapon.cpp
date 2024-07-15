@@ -6,7 +6,7 @@
 /*   By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 11:44:41 by gprada-t          #+#    #+#             */
-/*   Updated: 2024/07/14 12:19:37 by gprada-t         ###   ########.fr       */
+/*   Updated: 2024/07/15 12:21:59 by gprada-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,18 @@ Weapon::Weapon() {}
 
 Weapon::~Weapon() {}
 
-void	Weapon::setType(std::string &type)
+Weapon::Weapon(std::string type)
+{
+	setType(type);
+}
+
+
+void	Weapon::setType(std::string type)
 {
 	this->type = type;
 }
 
-std::string	Weapon::getType() const
+const std::string	&Weapon::getType() const
 {
 	return this->type;
 } 
