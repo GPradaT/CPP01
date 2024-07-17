@@ -1,0 +1,6 @@
+Insertaremos texto desde la posición del cursor con la letra 'i'.
+Con la letra A, insertaremos texto justo después del cursor.
+<ESC> lo pulsaremos cuando queramos entrar en modo normal (no inserción ni edición)
+
+Para guardar el archivo entraremos en modo normal e introduciremos los comandos :wq!, con la
+exclamación para forzar la ejecución del comando.

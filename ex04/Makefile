@@ -6,13 +6,13 @@
 #    By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/15 14:03:19 by gprada-t          #+#    #+#              #
-#    Updated: 2024/07/15 14:03:24 by gprada-t         ###   ########.fr        #
+#    Updated: 2024/07/17 09:24:10 by gprada-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = UnnecessaryViolence
+NAME = SedIsForLosers
 
-SRCS = Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++
