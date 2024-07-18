@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gprada-t <gprada-t@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/15 14:03:19 by gprada-t          #+#    #+#              #
-#    Updated: 2024/07/17 21:25:38 by gprada-t         ###   ########.fr        #
+#    Created: 2024/07/17 21:23:46 by gprada-t          #+#    #+#              #
+#    Updated: 2024/07/17 21:25:30 by gprada-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = SedIsForLosers
+NAME = Harl
 
-SRCS = main.cpp
+SRCS = Harl.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++
@@ -23,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
-%.o:%.cpp Makefile
+%.o:%.cpp Harl.hpp Makefile
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
